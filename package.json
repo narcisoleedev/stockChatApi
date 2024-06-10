@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "run": "nodemon ./src/app.js",
+    "script": "node run ./src/app.js",
+    "dev": "nodemon ./src/app.js",
     "format": "prettier --write \"./**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
