@@ -1,4 +1,3 @@
-const { loginModelFunc } = require("../model/loginModel.js");
 const pool = require("./config.js");
 
 const createTables = async () => {
