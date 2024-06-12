@@ -9,10 +9,6 @@ app.use(Cors());
 const bp = require("body-parser");
 app.use(bp.json());
 
-const createTables = require("./database/createTables.js");
-
-createTables();
-
 const port = process.env.PORT || 8000;
 
 //Routes
@@ -25,14 +21,14 @@ const signupRoute = require("./routes/signupRoute.js");
 app.use("/signup", signupRoute);
 
 //https://stockchat-26da337cf010.herokuapp.com/login
-const corestockRoute = require("./routes/corestockRoute.js");
+//const corestockRoute = require("./routes/corestockRoute.js");
 
-app.use("/corestock", corestockRoute);
+//app.use("/corestock", corestockRoute);
 
 //Database routes:
 const databaseRoute = require("./routes/databaseRoute.js");
 
-app.use("/database")
+app.use("/database", databaseRoute)
 
 app.get("/", (req, res) => {
   res.redirect("/login");

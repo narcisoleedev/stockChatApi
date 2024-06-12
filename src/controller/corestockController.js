@@ -12,7 +12,7 @@ const corestockControllerIntraday = async(req, res)=>{
         const returnData = {
 
         };
-        return res.status(200).json();
+        return res.status(200).json(returnData);
     })
 }
 const corestockControllerDaily = async(req, res)=>{
@@ -26,7 +26,7 @@ const corestockControllerDaily = async(req, res)=>{
         const returnData = {
 
         };
-        return res.status(200).json();
+        return res.status(200).json(returnData);
     })
 }
 const corestockControllerWeekly = async(req, res)=>{
@@ -40,7 +40,7 @@ const corestockControllerWeekly = async(req, res)=>{
         const returnData = {
 
         };
-        return res.status(200).json();
+        return res.status(200).json(returnData);
     })
 }
 const corestockControllerMonthly = async(req, res)=>{
@@ -54,7 +54,7 @@ const corestockControllerMonthly = async(req, res)=>{
         const returnData = {
 
         };
-        return res.status(200).json();
+        return res.status(200).json(returnData);
     })
 }
 

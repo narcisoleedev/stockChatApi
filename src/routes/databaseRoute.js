@@ -2,9 +2,9 @@ const Express = require('express');
 const router = Express.Router();
 const databaseController = require('../controller/databaseController.js');
 
-router.route("/intraday").get(databaseController.databaseControllerDrop);
-router.route("/daily").get(databaseController.databaseControllerCreate);
-router.route("/weekly").get(databaseController.databaseControllerTruncate);
-router.route("/monthly").get(databaseController.databaseControllerLog);
+router.route("/drop").post(databaseController.databaseControllerDrop);
+router.route("/create").post(databaseController.databaseControllerCreate);
+router.route("/truncate").post(databaseController.databaseControllerTruncate);
+router.route("/log").post(databaseController.databaseControllerLog);
 
 module.exports = router;
