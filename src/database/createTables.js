@@ -1,7 +1,7 @@
 const pool = require("./config.js");
 
 const createTables = async () => {
-  try{
+  try {
     const client = await pool.connect();
     const response = await client.query(
       `CREATE TABLE usersTable(
@@ -12,9 +12,9 @@ const createTables = async () => {
       );`,
     );
     client.release();
-  } catch(err) {
+  } catch (err) {
     console.log(err);
   }
 };
- 
+
 module.exports = createTables;

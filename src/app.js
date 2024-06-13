@@ -21,14 +21,17 @@ const signupRoute = require("./routes/signupRoute.js");
 app.use("/signup", signupRoute);
 
 //https://stockchat-26da337cf010.herokuapp.com/login
-//const corestockRoute = require("./routes/corestockRoute.js");
 
-//app.use("/corestock", corestockRoute);
+const middleware = require("./middleware/middleware.js");
+
+const corestockRoute = require("./routes/corestockRoute.js");
+
+app.use("/corestock", middleware, corestockRoute);
 
 //Database routes:
 const databaseRoute = require("./routes/databaseRoute.js");
 
-app.use("/database", databaseRoute)
+app.use("/database", databaseRoute);
 
 app.get("/", (req, res) => {
   res.redirect("/login");

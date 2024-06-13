@@ -1,6 +1,6 @@
-const Express = require('express');
+const Express = require("express");
 const router = Express.Router();
-const databaseController = require('../controller/databaseController.js');
+const databaseController = require("../controller/databaseController.js");
 
 router.route("/drop").post(databaseController.databaseControllerDrop);
 router.route("/create").post(databaseController.databaseControllerCreate);
