@@ -28,7 +28,7 @@ const loginPost = async (req, res) => {
               const token = jwt.sign(
                 { cpf: user.cpf },
                 process.env.ACCESS_TOKEN_SECRET,
-                { expiresIn: "30m" },
+                { expiresIn: "2m" },
               );
               return res.status(200).json({ token: token });
             } else {
