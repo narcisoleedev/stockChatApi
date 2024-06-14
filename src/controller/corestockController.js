@@ -35,7 +35,13 @@ const corestockControllerIntraday = async (req, res) => {
 };
 const corestockControllerDaily = async (req, res) => {
   try {
-    const data = e = await fetch(
+    const data = {
+      ticker: req.body.ticker,
+    };
+    console.log(
+      `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${data.ticker}&apikey=${process.env.APITOKEN}`,
+    );
+    const response = await fetch(
       `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${data.ticker}&apikey=${process.env.APITOKEN}`,
       { method: "GET" },
     );
