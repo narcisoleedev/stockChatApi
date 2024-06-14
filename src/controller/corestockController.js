@@ -13,10 +13,10 @@ const corestockControllerIntraday = async (req, res) => {
       interval: req.body.interval,
     };
     console.log(
-      `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${data.ticker}&interval=${data.interval}&apikey=${process.env.APIKEY}`,
+      `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${data.ticker}&interval=${data.interval}&apikey=${process.env.APITOKEN}`,
     );
     const response = await fetch(
-      `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${data.ticker}&interval=${data.interval}&apikey=${process.env.APIKEY}`,
+      `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${data.ticker}&interval=${data.interval}&apikey=${process.env.APITOKEN}`,
       { method: "GET" },
     );
     if (response.status !== 200)
@@ -36,7 +36,7 @@ const corestockControllerIntraday = async (req, res) => {
 const corestockControllerDaily = async (req, res) => {
   try {
     const data = e = await fetch(
-      `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${data.ticker}&apikey=${process.env.APIKEY}`,
+      `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${data.ticker}&apikey=${process.env.APITOKEN}`,
       { method: "GET" },
     );
     if (response.status !== 200)
@@ -59,10 +59,10 @@ const corestockControllerWeekly = async (req, res) => {
       ticker: req.body.ticker,
     };
     console.log(
-      `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=${data.ticker}&apikey=${process.env.APIKEY}`,
+      `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=${data.ticker}&apikey=${process.env.APITOKEN}`,
     );
     const response = await fetch(
-      `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=${data.ticker}&apikey=${process.env.APIKEY}`,
+      `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=${data.ticker}&apikey=${process.env.APITOKEN}`,
       { method: "GET" },
     );
     if (response.status !== 200)
@@ -85,10 +85,10 @@ const corestockControllerMonthly = async (req, res) => {
       ticker: req.body.ticker,
     };
     console.log(
-      `https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${data.ticker}&apikey=${process.env.APIKEY}`,
+      `https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${data.ticker}&apikey=${process.env.APITOKEN}`,
     );
     const response = await fetch(
-      `https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${data.ticker}&apikey=${process.env.APIKEY}`,
+      `https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${data.ticker}&apikey=${process.env.APITOKEN}`,
       { method: "GET" },
     );
     if (response.status !== 200)
