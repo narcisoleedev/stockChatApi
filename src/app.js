@@ -22,7 +22,7 @@ app.use("/signup", signupRoute);
 
 //https://stockchat-26da337cf010.herokuapp.com/login
 
-const middleware = require("./middleware/middleware.js");
+const middleware = require("./middleware/middleware.js")
 
 const corestockRoute = require("./routes/corestockRoute.js");
 
@@ -31,7 +31,7 @@ app.use("/corestock", middleware, corestockRoute);
 //Database routes:
 const databaseRoute = require("./routes/databaseRoute.js");
 
-app.use("/database", databaseRoute);
+app.use("/database", databaseRoute)
 
 app.get("/", (req, res) => {
   res.redirect("/login");
@@ -40,3 +40,4 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`app listening on port ${port}`);
 });
+
