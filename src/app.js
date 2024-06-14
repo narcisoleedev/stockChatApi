@@ -28,10 +28,14 @@ const corestockRoute = require("./routes/corestockRoute.js");
 
 app.use("/corestock", middleware, corestockRoute);
 
+const authRoute = require("./routes/authRoute.js");
+
+app.use("/auth", middleware, authRoute);
+
 //Database routes:
 const databaseRoute = require("./routes/databaseRoute.js");
 
-app.use("/database", databaseRoute)
+app.use("/database", databaseRoute);
 
 app.get("/", (req, res) => {
   res.redirect("/login");
